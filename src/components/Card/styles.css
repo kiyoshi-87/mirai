@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+.heading {
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-bottom: 25px;
+}
+
+.book {
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 10px;
+    width: 260px;
+    height: 330px;
+    color: #2E2A76;
+    padding-left: 10;
+    background-color: rgb(245, 245, 245);
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+}
+
+.cover {
+    top: 0;
+    position: absolute;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-90deg);
+    -ms-transform: rotatey(-90deg);
+    transform: rotatey(-85deg);
+}
+
+p {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.phrase-none {
+    display: none;
+    padding-left: 6%;
+
+}
+
+.phrase {
+    display: block;
+    padding-left: 7%;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-top: 80px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #7e97b8;
+    background-color: #e0e8ef;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgba(255, 255, 255, 0.333);
+    border-radius: 40px 40px 40px 40px;
+    padding: 12px 20px 12px 15px;
+    transform: translate(0px, 0px) rotate(0deg);
+    transition: 0.2s;
+    box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+}
+
+.button::before {
+    color: #516d91;
+    background-color: #E5EDF5;
+    box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+}
+
+.button:hover {
+    box-shadow: none;
+}
+
+.button-none {
+    display: none;
+}
+
+.secret-inputs-container {
+    gap: 2px;
+    padding-top: 5%;
+    margin-left: 5%;
+}
+
+.secret-inputs {
+    width: 40%;
+    border: 1px solid #ccc;
+    /* Light gray border */
+    border-radius: 4px;
+    /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    background-color: #fff;
+    /* White background for the inputs */
+    font-size: 15px;
+    /* Slightly larger font size for readability */
+    color: #333;
+    /* Dark text color */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover and focus effects */
+}
+
+
+
+.copy-btn {
+    margin-top: 5%;
+    color: #090909;
+    padding: 0.56em 1.36em;
+    /* Reduced by 20% */
+    font-size: 14.4px;
+    /* Reduced by 20% */
+    border-radius: 0.4em;
+    /* Reduced by 20% */
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 4.8px 4.8px 9.6px #c5c5c5, -4.8px -4.8px 9.6px #ffffff;
+    /* Reduced by 20% */
+}
+
+.copy-btn:active {
+    color: #666;
+    box-shadow: inset 3.2px 3.2px 9.6px #c5c5c5, inset -3.2px -3.2px 9.6px #ffffff;
+    /* Reduced by 20% */
+}
+
+/* From Uiverse.io by Li-Deheng */
+.btn-conteiner {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    --color-text: #ffffff;
+    --color-background: #ff135a;
+    --color-outline: #ff145b80;
+    --color-shadow: #00000080;
+}
+
+
+/* NEXT BUTTON */
+.btn-content {
+    display: flex;
+    align-items: center;
+    padding: 1px 5px;
+    /* Reduced by 50% */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    /* Reduced by 50% */
+    color: var(--color-text);
+    background: var(--color-background);
+    transition: 1s;
+    border-radius: 50px;
+    /* Reduced by 50% */
+    box-shadow: 0 0 0.1em 0 var(--color-background);
+    /* Reduced by 50% */
+}
+
+.btn-content:focus {
+    transition: 0.5s;
+    -webkit-animation: btn-content 1s;
+    animation: btn-content 1s;
+    outline: 0.05em solid transparent;
+    /* Reduced by 50% */
+    outline-offset: 0.1em;
+    /* Reduced by 50% */
+    box-shadow: 0 0 0.2em 0 var(--color-background);
+    /* Reduced by 50% */
+}
+
+.btn-content .icon-arrow {
+    transition: 0.5s;
+    margin-right: 0px;
+    transform: scale(0.3);
+    /* Reduced by 50% */
+}
+
+.btn-content:hover .icon-arrow {
+    transition: 0.5s;
+    margin-right: 12.5px;
+    /* Reduced by 50% */
+}
+
+.icon-arrow {
+    width: 10px;
+    /* Reduced by 50% */
+    margin-left: 7.5px;
+    /* Reduced by 50% */
+    position: relative;
+    top: 3%;
+    /* Reduced by 50% */
+}
+
+/* SVG */
+#arrow-icon-one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+
+    50% {
+        fill: var(--color-background);
+    }
+
+    100% {
+        fill: white;
+    }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+    0% {
+        outline: 0.1em solid var(--color-background);
+        /* Reduced by 50% */
+        outline-offset: 0;
+    }
+}
+
+@keyframes btn-content {
+    0% {
+        outline: 0.1em solid var(--color-background);
+        /* Reduced by 50% */
+        outline-offset: 0;
+    }
+}
