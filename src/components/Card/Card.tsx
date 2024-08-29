@@ -6,14 +6,13 @@ import PopContext from '../../Context/PopContext'
 
 function Card() {
 
-    const [mnemonic, setMneomonic] = useState([""])
     const [isPhrase, setIsPhrase] = useState(false)
     const [copied, setCopied] = useState(false)
-    const { setVisible, setIsBlur } = useContext(PopContext)
+    const { setVisible, setIsBlur, mnemonic, setMnemonic } = useContext(PopContext)
 
     const generatePhrase = () => {
         const mnArr = generateMnemonic().split(" ")
-        setMneomonic(mnArr)
+        setMnemonic(mnArr)
         console.log(mnArr);
 
         //hide the button and set phrase to true:
@@ -39,7 +38,7 @@ function Card() {
     return (
         <div className="book">
             <span><h3 className='heading'>{isPhrase ? "Here is your secret phase:" : "Get started with your crypto wallet..."}</h3></span>
-            <button onClick={generatePhrase} className={isPhrase ? 'button-none' : 'button'}><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" className="css-i6dzq1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>Create seed phrase</button>
+            <button onClick={generatePhrase} className={isPhrase ? 'button-none' : 'button'}><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="css-i6dzq1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>Create seed phrase</button>
             <div className={isPhrase ? 'phrase' : 'phrase-none'}>
                 <div className="secret-inputs-container">
                     {mnemonic.map((mn, index) => (

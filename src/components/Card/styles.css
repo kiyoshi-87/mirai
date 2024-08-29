@@ -12,7 +12,7 @@
     position: relative;
     font-family: 'Josefin Sans', sans-serif;
     border-radius: 10px;
-    width: 360px;
+    width: 22rem;
     height: 430px;
     color: #2E2A76;
     padding-left: 10;
@@ -57,7 +57,7 @@
     transition: all 0.5s;
     -webkit-transform: rotatey(-90deg);
     -ms-transform: rotatey(-90deg);
-    transform: rotatey(-85deg);
+    transform: rotatey(-84deg);
 }
 
 p {
@@ -188,7 +188,7 @@ p {
     background: #252525;
     box-shadow: 3px 3px #fafafa;
     cursor: pointer;
-    margin-top: 22%;
+    margin-top: 15%;
     margin-left: 68%;
 }
 

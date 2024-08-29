@@ -2,6 +2,7 @@ import { useContext } from "react"
 import SVGcomp from "./SVGcomp"
 import './Popup.css'
 import PopContext from "../../Context/PopContext"
+import { Link } from "react-router-dom"
 
 function Popup() {
 
@@ -19,7 +20,9 @@ function Popup() {
                 <p className="cookieHeading">Would you like to proceed ahead?</p>
                 <p className="cookieDescription">Remember that the only way to recover your wallet it to have your seed phrase. If you lose your seed phrase, your wallet will be lost forever.</p>
                 <div className="buttonContainer">
-                    <button className="acceptButton" onClick={() => setVisible(!visible)}>Proceed</button>
+                    <button className="acceptButton">
+                        <Link to='/seed' style={{ textDecoration: 'none', color: 'azure' }}>Proceed</Link>
+                    </button>
                     <button className="declineButton" onClick={handleDecline}>Cancel</button>
                 </div>
 

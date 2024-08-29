@@ -1,0 +1,385 @@
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+}
+
+h2,
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 2000;
+    color: #242222;
+}
+
+
+.btn {
+    font-family: monospace;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.35rem;
+    padding: 0.375em 1em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #fff;
+    box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+        0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+        0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+    transition: 0.15s ease;
+    cursor: pointer;
+}
+
+.btn:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+        0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+        0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.key-container {
+    background-color: rgba(252, 252, 252, 0.2);
+    width: 120vb;
+    padding-left: 10vb;
+    padding-top: 5vb;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10vb;
+}
+
+.keypair {
+    font-family: "SF Pro";
+    width: 490px;
+    padding: 0.875rem;
+    font-size: 1rem;
+    border: 1.5px solid #000;
+    border-radius: 0.5rem;
+    box-shadow: 2.5px 3px 0 #000;
+    outline: none;
+    transition: ease 0.25s;
+}
+
+.keypair:focus {
+    box-shadow: 5.5px 7px 0 black;
+}
+
+.clearWalletBtn {
+    --bg: #e74c3c;
+    --text-color: #fff;
+    position: relative;
+    width: 150px;
+    border: none;
+    background: var(--bg);
+    color: var(--text-color);
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    margin-left: 2em;
+    margin-bottom: 10px;
+    box-shadow: #c0392b 0px 7px 2px, #000 0px 8px 5px;
+}
+
+.clearWalletBtn:active {
+    top: 4px;
+    box-shadow: #c0392b 0px 3px 2px, #000 0px 3px 5px;
+}
+
+.clearWalletBtn:hover {
+    opacity: 1;
+}
+
+.delete-button {
+    background-color: #000;
+    color: #fff;
+    font-size: 8.8px;
+    /* Reduced from 44px */
+    border: 0.1px solid rgba(0, 0, 0, 0.1);
+    /* Reduced from 0.5px */
+    padding-bottom: 1.6px;
+    /* Reduced from 8px */
+    width: 12px;
+    /* Reduced from 60px */
+    height: 13px;
+    /* Reduced from 65px */
+    border-radius: 3px 3px 2.4px 2.4px;
+    /* Reduced from 15px 15px 12px 12px */
+    cursor: pointer;
+    position: relative;
+    will-change: transform;
+    transition: all 0.1s ease-in-out 0s;
+    user-select: none;
+    /* Gradient shading adjustments */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    background-position: bottom right, bottom right;
+    background-size: 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: inset -0.8px -2px 0px rgba(255, 255, 255, 0.4),
+        inset -0.8px -1.6px 0px rgba(0, 0, 0, 0.3),
+        0px 0.4px 0.2px rgba(0, 0, 0, 0.3),
+        0px 0.4px 0.2px rgba(255, 255, 255, 0.1);
+    transform: perspective(14px) rotateX(1deg) rotateY(0deg);
+}
+
+.delete-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5));
+    z-index: -1;
+    border-radius: 3px;
+    /* Reduced from 15px */
+    box-shadow: inset 0.8px 0px 0px rgba(255, 255, 255, 0.1),
+        inset 0.8px -1.6px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.delete-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    background-position: bottom right, bottom right;
+    background-size: 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    border-radius: 3px;
+    /* Reduced from 15px */
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.delete-button:active {
+    will-change: transform;
+    transform: perspective(16px) rotateX(1deg) rotateY(0.2deg) translateY(0.6px) scale(0.96);
+    height: 12.8px;
+    /* Reduced from 64px */
+    border: 0.05px solid rgba(0, 0, 0, 0.2);
+    /* Reduced from 0.25px */
+    box-shadow: inset -0.8px -1.6px 0px rgba(255, 255, 255, 0.2),
+        inset -0.8px -1.2px 0px rgba(0, 0, 0, 0.8),
+        0px 0.2px 0px rgba(0, 0, 0, 0.9),
+        0px 0.2px 0px rgba(255, 255, 255, 0.2);
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.delete-button::after:active {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2));
+}
+
+.delete-button:active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1%;
+    left: 4%;
+    width: 10%;
+    height: 16%;
+    background-color: rgba(255, 255, 255, 0.1);
+    animation: overlay 0.1s ease-in-out 0s;
+    pointer-events: none;
+}
+
+@keyframes overlay {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.delete-button:focus {
+    outline: none;
+}
+
+/* From Uiverse.io by ozgeozkaraa01 */
+.del-sng-btn {
+    position: relative;
+    display: inline-block;
+    border: none;
+    height: 60%;
+    border-radius: 1rem;
+    margin-top: 2%;
+    margin-left: 72%;
+    transition: all 0.5s linear;
+    padding: 0.5em;
+    background-color: #ACB1D6;
+}
+
+.del-sng-btn .tooltiptext {
+    visibility: hidden;
+    background-color: #AAAAAA;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 62px;
+    width: 60px;
+}
+
+.del-sng-btn:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+.copy {
+    /* button */
+    --button-bg: #353434;
+    --button-hover-bg: #464646;
+    --button-text-color: #CCCCCC;
+    --button-hover-text-color: #8bb9fe;
+    --button-border-radius: 10px;
+    --button-diameter: 36px;
+    --button-outline-width: 1px;
+    --button-outline-color: rgb(141, 141, 141);
+    /* tooltip */
+    --tooltip-bg: #f4f3f3;
+    --toolptip-border-radius: 4px;
+    --tooltip-font-family: Menlo, Roboto Mono, monospace;
+    /* 👆 this field should not be empty */
+    --tooltip-font-size: 12px;
+    /* 👆 this field should not be empty */
+    --tootip-text-color: rgb(50, 50, 50);
+    --tooltip-padding-x: 7px;
+    --tooltip-padding-y: 7px;
+    --tooltip-offset: 8px;
+    /* --tooltip-transition-duration: 0.3s; */
+    /* 👆 if you need a transition, 
+    just remove the comment,
+    but I didn't like the transition :| */
+}
+
+.copy {
+    box-sizing: border-box;
+    width: var(--button-diameter);
+    height: var(--button-diameter);
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    margin-left: 1em;
+}
+
+.tooltip {
+    position: absolute;
+    opacity: 0;
+    visibility: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font: var(--tooltip-font-size) var(--tooltip-font-family);
+    color: var(--tootip-text-color);
+    background: var(--tooltip-bg);
+    padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+    border-radius: var(--toolptip-border-radius);
+    pointer-events: none;
+    transition: all var(--tooltip-transition-duration) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+    content: attr(data-text-initial);
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+    width: var(--tooltip-padding-y);
+    height: var(--tooltip-padding-y);
+    background: inherit;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -999;
+    pointer-events: none;
+}
+
+.copy svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkmark {
+    display: none;
+}
+
+/* actions */
+
+.copy:hover .tooltip,
+.copy:focus:not(:focus-visible) .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: calc((100% + var(--tooltip-offset)) * -1);
+}
+
+.copy:focus:not(:focus-visible) .tooltip::before {
+    content: attr(data-text-end);
+}
+
+.copy:focus:not(:focus-visible) .clipboard {
+    display: none;
+}
+
+.copy:focus:not(:focus-visible) .checkmark {
+    display: block;
+}
+
+.copy:hover,
+.copy:focus {
+    background-color: var(--button-hover-bg);
+}
+
+.copy:active {
+    outline: var(--button-outline-width) solid var(--button-outline-color);
+}
+
+.copy:hover svg {
+    color: var(--button-hover-text-color);
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.popup-content button {
+    margin: 10px;
+}
