@@ -5,7 +5,6 @@ import Header from './components/Header/Header'
 import Popup from './components/Popup/Popup'
 import PopContext from './Context/PopContext'
 
-
 function App() {
     const { isBlur } = useContext(PopContext)
     return (
@@ -14,8 +13,8 @@ function App() {
                 <Header />
                 <div className='card-container'>
                     <Card />
-                </div></div>
-
+                </div>
+            </div>
             <Popup />
         </>
     )
